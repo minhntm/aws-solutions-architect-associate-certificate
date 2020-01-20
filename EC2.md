@@ -42,3 +42,55 @@ Physical EC2 server. reduce costs by allowing to use your existing server-bound 
 - 1 EC2 instances ↔ n security group
 - cannot block specific IP address using Security Groups (instead use Network Access Control Lists - VPC)
 - can specify allow rules, but not specify deny rules
+
+## Volumes, Snapshots
+- Volumes exist on EBS ⇒ virtual hard disk
+    - Volumes is **always** be in the same AZ as the EC2 instance
+    - Can change EBS volume sizes and storage type when it's running
+- Snapshots exist on S3 ⇒ photo of the disk
+    - Can take a snapshot while the instance is running, **however** should stop the instance before take the snapshot for volumes that serve as root devices ⇒ snapshots will be consistent
+    - Snapshots are incremental ⇒ only the blocks that have change since your last snapshot are moved to S3
+        - t1 ⇒ snapshot1
+        - create file a.txt ⇒ t2 ⇒ snapshot2
+        - S3 2 files is storaged: snapshot1, (snapshot2 -snapshot1)
+
+        ⇒ first snapshot may take some time to create
+
+- Snapshots are point in time copies of Volumes
+- AMI (amazone machine image) can be created from both Volumes and Snapshots
+
+### Move an EC2 volumes from one AZ to another
+- take a snapshot
+- create an AMI
+- launch the EC2 instance in a new AZ (choose subnet of AZ)
+
+### Move an EC2 volumes from one region to another
+- take a snapshot
+- create an AMI
+- copy AMI to other region
+- launch the EC2 instance by the copied AMI
+
+### Encrypted
+- Snapshots of encrypted volumes are encrypted automatically
+- Volumes restored from encrypted snapshots are encrypted automatically
+- can share snapshots but only if they are unencrypted
+- can encrypt root device volumes when create EC2 instance
+
+### Encrypt an unencrypted root device volume
+- take a snapshot of the uncrypted root device volume
+- copy snapshot and enable encryption
+- create an AMI from the encrypted Snapshot
+- use that AMI to launch new encrypted instances
+
+### Snapshot ⇒ AMI ⇒ instance
+- copy a snapshot can enable **encryption**
+- create AMI from a snapshot can only change **virtualization type** (HVM, PV)
+- copy AMI can change **region**
+- launch instance from an AMI can choose **AZ**
+
+## EBS vs Instance Store
+- Instance Store Volumes are also called Ephemeral Storage
+- Instance store volumes **can't be stopped**. If the host fails ⇒ lose data
+- EBS backed instances **can be stopped**. If instance is stopped ⇒ not lose data
+- can reboot both, not lose data
+- By default, both Root volumes will be deleted on termination. Can choose option that keep the root device volume backed by EBS volumes.
