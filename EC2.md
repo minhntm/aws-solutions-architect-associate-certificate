@@ -94,3 +94,44 @@ Physical EC2 server. reduce costs by allowing to use your existing server-bound 
 - EBS backed instances **can be stopped**. If instance is stopped ⇒ not lose data
 - can reboot both, not lose data
 - By default, both Root volumes will be deleted on termination. Can choose option that keep the root device volume backed by EBS volumes.
+## IAM Roles With EC2
+
+- Roles are more secure and easier than storing access key and secret access key in EC2 instance
+- Roles can be assigned to an EC2 instance after it's created
+- Roles are universal - can use in any region
+
+## Elastic File System
+
+- support NFSv4 protocol
+- only **pay as you use** (**no pre-provisioning** required)
+- can scale up to petabytes
+- support thousands of concurrent NFS connections
+- storing data across multiple AZ's within a region
+- **Read After Write Consistency**
+
+## EC2 Placement Groups
+
+- Clustered Placement Group
+    - AWS recommend the same instances within this groups
+    - can't span multiple AZ
+    - use case: low network latency / high network throughput
+- Spread Placement Group
+    - Can span multiple AZ
+    - use case: Individual EC2 instances
+- Partitioned
+    - Can span multiple AZ
+    - use case: Multiple EC2 instances HDFS, HBase, Cassandra
+- only certain types of instances can be launched in a placement group (compute optimied, gpu, memory optimied, storage optimized)
+- can't merge placement groups
+- can't move an existing instance into a placement group (can create AMI from existing instance and launch new instance into a placement group)
+
+## Things that can be modified after launch
+
+- instance type (size, memory, network...)
+- security group ⇒ can be changed if the instance is running in an VPC (default when launch instance)
+- termination protection
+    - note that termination protection protects from termination calls from AWS Console, CLI, API (human errors), not prevent termination triggerd by an OS shutdown command termination from an Auto Scaling group, termination of a Spot Instance (due to Spot price changes)
+
+## Bootstrapping
+
+- allow to run a scripot to initialize your instance with OS configurations, applications
