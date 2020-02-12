@@ -130,3 +130,14 @@ The range varies depending on the client's operating system.
 - 2 types:
     - Interface Endpoints
     - Gateway Endpoints (S3, DynamoDB)
+
+## Elastic IP Addresses (EIPs)
+
+- AWS mainatins a pool of public IP addresses in each region, you can allocate EIP to your account and release
+- n EIP → 1 region (~~n region → 1 EIP~~)
+- 1 network interface (find in EC2 place) ↔ 1 EIP
+- there are charges for EIPs allocated to your account, even they are not associated with a resource
+
+## Virtual Private Gateways (VPGs), Customer Gateways (CGWs), Virtual Private Networks (VPNs)
+
+![VPG-CGW](image/../images/vpg-cgw.png)
