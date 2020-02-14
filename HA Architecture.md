@@ -35,3 +35,10 @@
 - Path patterns: allow you to direct traffic to different EC2 instances based on the URL contained in the request
 
 ![Path patterns LB](images/path-pattern-lb.png)
+
+## Auto Scaling
+
+Steps to create Auto Scaling
+
+1. Launch Configuration (EC2 configuration)
+2. Create Auto Scaling Group, can choose *keep this group at its initial size* or *use scaling policies to adjust the capacity of this group* (can scale between x~y number of instances depend on metrics - CPU, Network, Request...)
