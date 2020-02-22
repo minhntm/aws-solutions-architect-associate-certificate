@@ -14,6 +14,7 @@ Some Notes that help you to pass AWS Solutions Architect Associate Certificate E
 - [VPC](VPC.md)
 - [HA Architecture](HA-Architecture.md)
 - [Applications](Applications.md)
+- [Serverless](Serverless.md)
 
 ## Online Courses
 
