@@ -12,8 +12,8 @@
 - consists of IGWs (Virtual Private Gateways), Route Tables, Network Access Control Lists, Subnets, Security Groups
 - Security Groups are Statefull, Network Access Control Lists are Stateless
 - 10.0.0.0/16 ⇒ 65536 IP
-10.0.0.0/24 ⇒ 256 IP
-10.0.1.0/28 ⇒ 16 IP
+    - 10.0.0.0/24 ⇒ 256 IP
+    - 10.0.1.0/28 ⇒ 16 IP
 - create a VPC ⇒ default Route Table, Network ACL, Security Group is automatically created. (subnet, internet gateway isn't created)
 - us-east-1a in your AWS account is different to us-east-1 in another account (the AZ's are randomized)
 - AWS reserve 5 IP within a subnet (you cannot use those)

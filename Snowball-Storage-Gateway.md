@@ -21,3 +21,10 @@ Snowball is a petabyte-scale data transport solution that uses secure appliances
 - Gateway Virtual Tape Library
 
 ![Gateway Virtual Tape Lib](./images/gateway-virtual-tape.png)
+
+
+### Tips:
+
+- low-latency service of the majority (entire dataset) of files is required ⇒ gateway stored + file gateways
+- low-latency service of the last few days of files is required ⇒ gateway-cached + file gateways
+- cost-effectively and durably archive backup data in GLACIER or DEEP_ARCHIVE ⇒ VTL
