@@ -1,4 +1,5 @@
 # VPC
+![VPC](images/vpc.jpeg)
 
 ## Features
 

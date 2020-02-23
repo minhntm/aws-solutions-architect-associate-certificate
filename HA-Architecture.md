@@ -1,4 +1,5 @@
 # HA Architecture
+![HA Architecture](images/ha-achitecture.jpeg)
 
 ## Load Balancers
 

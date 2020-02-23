@@ -78,7 +78,7 @@ Eg: Vietnam government manages the reservation of **.vn** domain.
 
 Simple Routing
 
-![Simple Routing](images/simple-routing.png)
+![Simple Routing](images/simple-routing.jpeg)
 
 - 1 record ⇒ n IP
 - Route53 returns 1 IP randomly
@@ -86,23 +86,23 @@ Simple Routing
 
 Weighted Routing
 
-![Weighted Routing](images/weighted-routing.png)
+![Weighted Routing](images/weighted-routing.jpeg)
 
 - split traffic based on different weights assigned
 
 Latency-based Routing
 
-![latency-based Routing](images/latency-based-routing.png)
+![latency-based Routing](images/latency-based-routing.jpeg)
 
 - route traffic based on the lowest network latency (fastest response time)
 - Failover Routing
 
-    ![Failover Routing](images/failover-routing.png)
+    ![Failover Routing](images/failover-routing.jpeg)
 
     - When primary end point fails the health check, route traffic to second end point
 - Geolocation Routing
 
-    ![Geolocation Routing](images/geolocation-routing.png)
+    ![Geolocation Routing](images/geolocation-routing.jpeg)
 
     - route traffic based on the geographic location of your users
 - Geoproximity Routing (Traffic Flow Only)
@@ -111,7 +111,7 @@ Latency-based Routing
     - **must use Route53 traffic flow**
 - Multivalue Answer Routing
 
-    ![Multivalue Answer Routing](images/multivalue-answer-routing.png)
+    ![Multivalue Answer Routing](images/multivalue-answer-routing.jpeg)
 
     - similar to simple routing however it allows you to put health checks on each record set
 
