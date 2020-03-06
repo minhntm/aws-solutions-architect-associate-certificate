@@ -16,16 +16,17 @@ Some Notes that help you to pass AWS Solutions Architect Associate Certificate E
 - [Applications](Applications.md)
 - [Serverless](Serverless.md)
 
-## Online Courses
-
-[AWS Certified Solutions Architect Associate Exam Study Path](https://tutorialsdojo.com/aws-certified-solutions-architect-associate)
+## What I learned
 
 [AWS Certified Solutions Architect: Associate Certification Exam](https://www.udemy.com/course/aws-certified-solutions-architect-associate/)
 
 [AWS Certified Solutions Architect Associate Practice Exams](https://www.udemy.com/course/aws-certified-solutions-architect-associate-amazon-practice-exams-saa-c02/)
 
-## Books
+[Warning: This Book have some outdated information] [Certified Solutions Architect Official Study](https://www.amazon.com/Certified-Solutions-Architect-Official-Study/dp/1119138558/)
 
-[Certified Solutions Architect Official Study](https://www.amazon.com/Certified-Solutions-Architect-Official-Study/dp/1119138558/)
+## What I haven't learned yet but I think it's good because it is updated for new exam format - SAA-C02 
 
+[Ultimate AWS Certified Solutions Architect Associate 2020](https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c02/)
+
+---
 [Read this note for more update](https://www.notion.so/minhnt/AWS-Solutions-Architect-Associate-Certificate-Notes-16cb82562c3b4fd6b86da3d0e0ce3984)
