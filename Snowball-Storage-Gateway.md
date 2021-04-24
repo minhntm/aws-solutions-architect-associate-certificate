@@ -1,11 +1,11 @@
 # Snowball
 
-Snowball is a petabyte-scale data transport solution that uses secure appliances to transfer large amounts of data into and out of AWS.
+Snowballs are secure hardware devices that serves to collect data in austere environments or environments not connected to the internet and transfer this to the AWS cloud. This can be done by sending the devices back and forth between the locations and AWS by mail. Snowball is suited for petabyte-scale data transfer.
 
 # Storage gateway
 
 - File Gateway
-    For flat files, stored directly on S
+    For flat files, stored directly on S3
 
     ![File Gateway](./images/file-gateway.png)
 
@@ -25,6 +25,6 @@ Snowball is a petabyte-scale data transport solution that uses secure appliances
 
 ### Tips:
 
-- low-latency service of the majority (entire dataset) of files is required ⇒ gateway stored + file gateways
-- low-latency service of the last few days of files is required ⇒ gateway-cached + file gateways
-- cost-effectively and durably archive backup data in GLACIER or DEEP_ARCHIVE ⇒ VTL
+- Low-latency service of the majority (entire dataset) of files is required ⇒ gateway stored + file gateways
+- Low-latency service of the last few days of files is required ⇒ gateway-cached + file gateways
+- Cost-effectively and durably archive backup data in GLACIER or DEEP_ARCHIVE ⇒ VTL

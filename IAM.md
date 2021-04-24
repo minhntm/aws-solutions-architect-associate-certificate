@@ -25,5 +25,5 @@ Edge location is used for caching content, consists of CloudFront, Amazon's Cont
 - New Users are assigned **Access Key ID** & **Secret Access Keys** when first created
 - Cannot use **Access key ID** & **Secret Access Key** to Login in to the console. Can use this to access AWS via the APIs and Command Line
 - If you lose **Access key ID** and **Secret Access Key**, you have to regenerate them
-- Always setup Multifactor Authentication on your root account (google authen)
+- Always setup Multi-factor Authentication on your root account (Google Authenticator)
 - Can create and customise your own password rotation policies
